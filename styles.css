@@ -122,7 +122,7 @@ body {
 .wave {
   position: relative;
   width: 100%;
-  height: 60px; /* adjust height if you want taller/shorter waves */
+  height: 60px;
   background-color: #ffffff; /* match section below */
   overflow: hidden;
 }
@@ -131,14 +131,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 120%;          /* enough for animation movement */
-  min-width: 100%;      /* never smaller than screen width */
+  width: 120% !important;     
+  min-width: 100% !important; 
   height: 100%;
   animation: waveMove 10s linear infinite;
 }
 
 .wave svg:nth-child(2) {
-  top: 5px;             /* small offset for depth */
+  top: 5px;
   animation: waveMoveReverse 15s linear infinite;
   opacity: 0.6;
 }
@@ -156,7 +156,7 @@ body {
 
 @keyframes waveMove {
   from { transform: translateX(0); }
-  to { transform: translateX(-20%); } /* matches 120% width */
+  to { transform: translateX(-20%); } /* matches width: 120% */
 }
 
 @keyframes waveMoveReverse {
